@@ -1,0 +1,50 @@
+
+.container-home {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: wheat;
+    box-shadow: 1px 1px 10px wheat;
+    margin-bottom: 2.5rem;
+
+    .resume {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+
+        h1 {
+            width: 400px;
+            font-size: 50px;
+        }
+        h2 {
+            width: 400px;
+            font-size: 42px;
+        }
+        span {
+            margin: 2.5rem 0 0;
+            width: 400px;
+
+            a {
+                background-color: white;
+                color: black;
+                padding: 1rem 1.5rem;
+                box-shadow: 1px 1px 5px white;
+            }
+        }
+        p {
+            width: 400px;
+            font-size: 32px;
+        }
+
+    }
+
+    .resume-phone {
+        width: 40%;
+
+        img {
+            max-width: 80%;
+        }
+    }
+}
