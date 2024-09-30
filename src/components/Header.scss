@@ -1,7 +1,7 @@
 
 .container-header {
     width: 90%;
-    margin: 0 auto;
+    margin: 1rem 0;
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -26,16 +26,23 @@
                 
                 li {
                     margin: 0 0.5rem;
-                }
-            }
-        }
-    
-        div {
-            ul {
-                display: flex;
-    
-                li {
-                    margin: 0 0.5rem;
+                    display: flex;
+                    align-items: center;
+
+                    input {
+                        padding: 0.8rem 4rem 0.8rem 1rem;
+                        border-radius: 1rem;
+                        outline: 0;
+                        border-bottom: 1px solid silver;
+                        text-align: start;
+                    }
+
+                    .icon-search {
+                        font-size: 25px;
+                        margin-left: -35px;
+                        margin-bottom: -5px;
+                    }
+
                 }
             }
         }

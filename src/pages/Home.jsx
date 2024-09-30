@@ -1,11 +1,9 @@
-import Header from "../components/Header";
 import resumePhone from '../assets/img/home-phone.png';
 import './Home.scss';
 
 const Home = () => {
     return (
         <>
-            <Header />
             <section className="container-home">
                 <article className="resume">
                     <h1>AirPods Max</h1>
@@ -19,9 +17,9 @@ const Home = () => {
                     <img src={resumePhone} alt="HeadPhone" />
                 </article>
             </section>
-            <h2 className='title'>Produtos</h2>
+            <h2 className='title'>Melhores Produtos</h2>
         </>
-    )
+    );
 }
 
 export default Home;
