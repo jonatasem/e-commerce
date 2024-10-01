@@ -1,11 +1,16 @@
 import React from 'react';
+
+//redux
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, changeQuantity } from '../redux/cartSlice';
+
+//scss
 import './Cart.scss';
 
+//img
 import emptyCart from '../assets/img/empty-cart.png';
 
-const Cart = () => {
+const Cart = ({ onBack }) => {
   const cartItems = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
 
@@ -26,8 +31,9 @@ const Cart = () => {
   return (
     <>
       <section className='container-cart'>
-        <span>
+        <span className='menu-card'>
           <h2 className='title-cart'>Carrinho</h2>
+          <p onClick={onBack} style={{ cursor: 'pointer', color: 'blue' }}>Voltar</p>
         </span>
         {cartItems.map(item => (
           <article className='card-item' key={item.id}>
@@ -45,7 +51,7 @@ const Cart = () => {
           </article>
         ))}
         <div className="container-total">
-          <p className='total-value'>Total: ${totalValue.toFixed(2)}</p> {/* Exibir o valor total */}
+          <p className='total-value'>Total: ${totalValue.toFixed(2)}</p>
         </div>
       </section>
     </>

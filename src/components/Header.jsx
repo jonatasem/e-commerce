@@ -1,7 +1,10 @@
-import './Header.scss';
+//icon
 import { CiSearch } from "react-icons/ci";
 
-const Header = ({ setSearchTerm }) => { // Recebe a função como prop
+//scss
+import './Header.scss';
+
+const Header = ({ setSearchTerm }) => {
     return (
         <header className='container-header'>
             <h2>Head<span>set</span></h2>
@@ -16,7 +19,7 @@ const Header = ({ setSearchTerm }) => { // Recebe a função como prop
                                     id="search" 
                                     placeholder='Pesquise um produto...' 
                                     className="search-input"
-                                    onChange={(e) => setSearchTerm(e.target.value)} // Atualiza o termo de busca
+                                    onChange={(e) => setSearchTerm(e.target.value)}
                                 />
                                 <span className='icon-search'>
                                     <CiSearch />

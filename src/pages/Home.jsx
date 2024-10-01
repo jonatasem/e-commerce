@@ -1,4 +1,7 @@
+//img
 import resumePhone from '../assets/img/home-phone.png';
+
+//scss
 import './Home.scss';
 
 const Home = () => {

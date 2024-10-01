@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
+
+//redux
 import { useDispatch } from 'react-redux';
 import { addItem } from '../redux/cartSlice';
+
+//scss
 import './Product.scss';
+
+//icon
 import { FaCartPlus } from "react-icons/fa";
 
 const Product = ({ product }) => {
@@ -36,7 +42,7 @@ const Product = ({ product }) => {
     <section className='container-products' id='products'>
       <img src={product.img} alt={product.name} />
       <h2>{product.name}</h2>
-      <p className='preco-item'>${product.price}</p>
+      <p>${product.price}</p>
       <button onClick={handleAddToCart}>
         Adicionar
         <FaCartPlus />
