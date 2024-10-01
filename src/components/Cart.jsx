@@ -9,6 +9,8 @@ const Cart = () => {
   const cartItems = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
 
+  const totalValue = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+
   if (cartItems.length === 0) {
     return (
       <>
@@ -24,10 +26,12 @@ const Cart = () => {
   return (
     <>
       <section className='container-cart'>
-        <h2 className='title-cart'>Carrinho</h2>
+        <span>
+          <h2 className='title-cart'>Carrinho</h2>
+        </span>
         {cartItems.map(item => (
-          <article key={item.id}>
-            <img src={item.img} alt="image do produto" />
+          <article className='card-item' key={item.id}>
+            <img src={item.img} alt="imagem do produto" />
             <h3>{item.name}</h3>
             <p className='value-cart'>Preço: ${item.price}</p>
             <p className='amount-cart'>Quantidade: {item.quantity}</p>
@@ -40,6 +44,9 @@ const Cart = () => {
             <button onClick={() => dispatch(removeItem({ id: item.id }))}>Remover</button>
           </article>
         ))}
+        <div className="container-total">
+          <p className='total-value'>Total: ${totalValue.toFixed(2)}</p> {/* Exibir o valor total */}
+        </div>
       </section>
     </>
   );

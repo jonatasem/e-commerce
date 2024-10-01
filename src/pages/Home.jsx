@@ -10,7 +10,7 @@ const Home = () => {
                     <h2>Headphone</h2>
                     <p>Apple</p>
                     <span>
-                        <a href="#products">Shop Now</a>
+                        <a href="#products">Comprar Agora</a>
                     </span>
                 </article>
                 <article className="resume-phone">

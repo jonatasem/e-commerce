@@ -20,7 +20,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <Header setSearchTerm={setSearchTerm} />
-      <img className='btn-cart' onClick={toggleCart} src={cartImage} alt="logo cart" />
+      <img className='btn-cart' onClick={toggleCart} src={cartImage} alt="logo cart" /> {/*btn card*/}
       <main>
         <Home />
         <ProductList searchTerm={searchTerm} /> {/* Passa o termo de busca para ProductList */}
