@@ -5,24 +5,23 @@ import ProductList from './components/ProductList';
 import Home from './pages/Home';
 import Cart from './components/Cart';
 import Header from './components/Header';
-import cartImage from './assets/svg/cart.svg';
 import Footer from './components/Footer';
 
 const App = () => {
+  // estado inicial não visível
   const [isCartVisible, setCartVisible] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
 
+  // muda o estado do cart, seja ele qual for.
   const toggleCart = () => {
     setCartVisible(!isCartVisible);
   };
 
   return (
     <Provider store={store}>
-      <Header setSearchTerm={setSearchTerm} />
-      <img className='btn-cart' onClick={toggleCart} src={cartImage} alt="logo cart" />
+      <Header toggleCart={toggleCart} /> {/* Passando toggleCart aqui */}
       <main>
         <Home />
-        <ProductList searchTerm={searchTerm} />
+        <ProductList />
         {isCartVisible && <Cart onBack={toggleCart} />} {/* Passa a função onBack */}
       </main>
       <Footer />

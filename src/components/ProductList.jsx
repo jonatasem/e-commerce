@@ -10,7 +10,6 @@ import mousepad from '../assets/img/products/mousepad.jpg';
 import cadeira from '../assets/img/products/cadeira-gamer.jpg';
 import fechadura from '../assets/img/products/fechadura.jpg';
 import fone from '../assets/img/products/g0918.jpg';
-import gabinete from '../assets/img/products/gabinete.jpg';
 import mancer from '../assets/img/products/mancer.jpg';
 import rgb from '../assets/img/products/rgb.jpg';
 import mcr from '../assets/img/products/mcr.jpg';
@@ -26,15 +25,10 @@ const products = [
   { id: 8, img: mcr, name: 'Cadeira Gamer Mancer', price: 960 }
 ];
 
-const ProductList = ({ searchTerm }) => {
-  // Filtra os produtos com base no termo de busca
-  const filteredProducts = products.filter(product =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+const ProductList = () => {
   return (
     <section className='container-productList'>
-      {filteredProducts.map(product => (
+      {products.map(product => (
         <Product key={product.id} product={product} />
       ))}
     </section>

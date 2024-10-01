@@ -1,7 +1,7 @@
 
 .container-header {
-    width: 90%;
-    margin: 1rem 0;
+    width: 95%;
+    margin: 1rem auto;
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -45,6 +45,32 @@
 
                 }
             }
+        }
+    }
+
+    .icon-cart {
+        display: flex;
+        align-items: center;
+
+        .btn-cart {
+            width: 40px;
+            top: 50px;
+            right: 30px;
+            cursor: pointer;
+        }
+    
+        .btn-cart:active {
+            transform: scale(0.9);
+        }
+
+        p {
+            padding: 0.5rem;
+            border-radius: 25%;
+            border: 1px solid silver;
+            width: 10px;
+            height: 10px;
+            display: flex;
+            align-items: center;
         }
     }
 }
